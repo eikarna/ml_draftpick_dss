@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup,find_packages
 
 setup(
     name='ml_draftpick_dss',
@@ -8,10 +8,10 @@ setup(
     author='Muhammad Rizqi Nur',
     author_email='rizqinur2010@gmail.com',
     license='MIT License',
-    packages=setuptools.find_packages(),
+    packages=find_packages(),
     install_requires=[
         'pandas',
-        'numpy', 
+        'numpy==1.26.4', 
         'tensorflow',
         'tensorflow-addons',
         'paddleocr',
@@ -21,7 +21,7 @@ setup(
         'torch',
         'opencv-python',
         'scikit-image',
-        'albumentations>=1.3.0',
+        'albumentations==1.4.10',
         'plotly',
         'torchinfo',
         'optuna',
@@ -29,7 +29,9 @@ setup(
         'torch-lr-finder',
         'catboost',
         'coloredlogs',
-        'tqdm'
+        'tqdm',
+        'albucore==0.0.13',
+        'protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<6.0.0dev,>=3.20.3'
     ],
 
     classifiers=[
